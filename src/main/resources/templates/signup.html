@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/appointment.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+
+<body>
+<div class="inner-layer">
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+<!--                <a href="#">BetterHelp</a>-->
+                <img src="image/betterhelp-logo.png" class="logo" width="190px", height="80px">
+            </div>
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="/datas">display</a></li>
+                <li><a href="/shop">location</a></li>
+                <li><a href="/home">Dashboard</a></li>
+                <li><a href="/login">logout</a></li>
+
+            </ul>
+
+        </div>
+    </nav>
+        <div class="container">
+            <div class="row no-margin">
+                <div class="col-sm-7">
+                    <div class="content">
+                        <h1>Better Help</h1>
+                        <p>We take care of your health</p>
+<!--                        <h2>For Help Call : +000-000-000</h2>-->
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-data">
+                        <div class="form-head">
+                            <h2>Therapy Appointemnt</h2>
+                        </div>
+                        <form action="/appointment" method="post" th:object="${appointmentRequest}">
+                            <div class="form-body">
+                                <div class="row form-row">
+                                    <input type="text" name="firstname" placeholder="Enter your First Name" class="form-control">
+                                </div>
+                                <div class="row form-row">
+                                    <input type="text" name="lastname" placeholder="Enter your last Name" class="form-control">
+                                </div>
+                                <div class="row form-row">
+                                    <input type="date" name="dateofbirth" placeholder="Enter Your DOB" class="form-control">
+                                </div>
+                                <div class="row form-row">
+                                    <input type="ate" name="contactnumber" placeholder="Enter Your Number" class="form-control">
+                                </div>
+                                <div class="row form-row">
+                                    <input type="text" name="email" placeholder="Enter Email Address" class="form-control">
+                                </div>
+                                <div class="row form-row">
+                                    <input id="dat" name="gender" type="text" placeholder="gender" class="form-control">
+                                </div>
+                                <div class="row form-row">
+                                    <input id="date" name="insurance" type="text" placeholder="insurance" class="form-control">
+                                </div>
+                                <div class="row form-row">
+                                    <input id="dte" name="doctors" type="text" placeholder="doctors" class="form-control">
+                                </div>
+
+
+                                <div class="row form-row">
+                                    <button class="btn btn-success btn-appointment">
+                                        Therapy Appointment
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#dat").datepicker();
+    })
+</script>
+
+</body>
+</html>
